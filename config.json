@@ -17,6 +17,24 @@
             "port": "21"
         }
     ]
-            }
+            },
+            {"Name": "CPE router",
+                "ip": "192.168.2.1",
+                "services": [
+                    {
+                    "name": "http",
+                    "port": "80"
+                },{
+                    "name": "https",
+                    "port": "443"
+                },{
+                    "name": "ssh",
+                    "port": "22"
+                },{
+                    "name": "Telnet",
+                    "port": "21"
+                }
+            ]
+                    }
     ]
 }

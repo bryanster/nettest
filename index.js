@@ -21,25 +21,22 @@ main()
 
 async function checkdevices() {
     await console.log("starting internal device checks\n");
-
     var devices = config.devices;
-    devices.forEach((device) => {
-        console.log(`Checking device: ${device.Name}`);
-        var ip = device.ip;
-        var service = device.services;
-        service.forEach(service => {
-            isPortReachable(service.port, { host: `${ip}` }).then((value) => {
-                if (value == true) {
-                    console.log(`${service.name} \t= \t ${logSymbols.success}`);
-                }
-                else
-                    (
-                        console.log(`${service.name}\t=\t ${logSymbols.error}`)
-                    );
 
-            });
-
-        });
-    });
+    for (i in devices){
+        await console.log(`Checking device: ${devices[i].Name}`);
+        var services = devices[i].services;
+        for(j in services){
+            var value= await isPortReachable(services[j].port, {host: `${devices[i].ip}`})
+            if (value == true) {
+                console.log(`${services[j].name} \t= \t ${logSymbols.success}`);
+            }
+            else
+                (
+                    console.log(`${services[j].name}\t=\t ${logSymbols.error}`)
+                );
+            
+        }
+    }
 }
 
