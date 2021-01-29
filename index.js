@@ -13,10 +13,6 @@ async function main(){
         else(console.log("google\t=\tunreachable\n"))
         checkdevices();
     })
-    
-
-    
-
 
 }
 
@@ -27,7 +23,7 @@ async function checkdevices() {
 
     var devices = config.devices;
     devices.forEach((device) => {
-        console.log(`Checking device: ${device.Name}\n`);
+        console.log(`Checking device: ${device.Name}`);
         var ip = device.ip;
         var service = device.services;
         service.forEach(service => {
