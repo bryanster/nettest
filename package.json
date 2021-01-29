@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "is-port-reachable": "^3.0.0",
+    "log-symbols": "^4.0.0",
     "ping": "^0.4.0"
   }
 }

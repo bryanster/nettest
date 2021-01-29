@@ -1,5 +1,6 @@
 const isPortReachable = require('is-port-reachable');
 var ping = require('ping');
+const logSymbols = require('log-symbols');
 var config = require('./config.json')
  
 async function main(){
@@ -8,9 +9,9 @@ async function main(){
     await console.log("testing internet connectivity\n")
     ping.promise.probe(host).then((response) => {
         if(response.alive === true){
-            console.log("google\t=\treachable\n")
+            console.log(`google\t=\t${logSymbols.success}\n`)
         }
-        else(console.log("google\t=\tunreachable\n"))
+        else(console.log(`google\t=\t${logSymbols.error}\n`))
         checkdevices();
     })
 
@@ -29,11 +30,11 @@ async function checkdevices() {
         service.forEach(service => {
             isPortReachable(service.port, { host: `${ip}` }).then((value) => {
                 if (value == true) {
-                    console.log(`${service.name} \t= \t Reachable`);
+                    console.log(`${service.name} \t= \t ${logSymbols.success}`);
                 }
                 else
                     (
-                        console.log(`${service.name} \t= \tunreachable`)
+                        console.log(`${service.name}\t=\t ${logSymbols.error}`)
                     );
 
             });
