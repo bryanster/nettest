@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "is-port-reachable": "^3.0.0"
+    "is-port-reachable": "^3.0.0",
+    "ping": "^0.4.0"
   }
 }
