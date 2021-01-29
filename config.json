@@ -33,6 +33,12 @@
                 },{
                     "name": "Telnet",
                     "port": "21"
+                },{
+                    "name": "dns",
+                    "port": "53"
+                },{
+                    "name": "smtp",
+                    "port": "25"
                 }
             ]
                     }
