@@ -1,0 +1,14 @@
+{
+  "name": "nettest",
+  "version": "1.0.0",
+  "description": "a network tester",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "is-port-reachable": "^3.0.0"
+  }
+}

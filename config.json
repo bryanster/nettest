@@ -1,0 +1,22 @@
+{
+    "devices": [
+        {"Name": "firewall",
+        "ip": "192.168.2.240",
+        "services": [
+            {
+            "name": "http",
+            "port": "80"
+        },{
+            "name": "https",
+            "port": "443"
+        },{
+            "name": "ssh",
+            "port": "22"
+        },{
+            "name": "Telnet",
+            "port": "21"
+        }
+    ]
+            }
+    ]
+}
